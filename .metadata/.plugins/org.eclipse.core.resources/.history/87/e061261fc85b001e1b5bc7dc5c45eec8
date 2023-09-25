@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+	<table class="table">
+		<thead>
+			<tr>ID</tr>
+			<tr>Apellidos</tr>
+			<tr>Nombres</tr>
+			<tr>Edad</tr>
+			<tr>Sexo</tr>
+			<tr>Salario</tr>
+		</thead>
+		<tbody>
+			<tr th:each="empleado:${empleados}")>
+				<th th:text="${empleado.id}" >${empleado.id}</td>
+				<td th:text="${empleado.apellidos}" >${empleado.apellidos}</td>
+				<td th:text="${empleado.nombres}" >${empleado.nombres}</td>
+				<td th:text="${empleado.edad}" >${empleado.edad}</td>
+				<td th:text="${empleado.sexo}" >${empleado.sexo}</td>
+				<td th:text="${empleado.salario}" >${empleado.salario}</td>
+				<td th:text="" >
+					<a class="btn btn-warning">Editar</a>
+					<a class="btn btn-danger">Eliminar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

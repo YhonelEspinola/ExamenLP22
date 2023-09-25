@@ -1,0 +1,9 @@
+package com.cibertec.service;
+
+import com.cibertec.interfaceService.IempleadoService;
+import com.cibertec.entity.Empleado;
+
+
+public class EmpleadoService implements IempleadoService{
+
+}

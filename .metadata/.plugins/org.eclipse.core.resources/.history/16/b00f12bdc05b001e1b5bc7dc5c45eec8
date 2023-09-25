@@ -1,0 +1,5 @@
+package com.cibertec.interfaceService;
+
+public interface IempleadoService {
+
+}

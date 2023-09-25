@@ -1,0 +1,40 @@
+package com.cibertec.service;
+
+import com.cibertec.interfaceService.IempleadoService;
+import com.cibertec.repository.EmpleadoRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.cibertec.entity.Empleado;
+
+
+public class EmpleadoService implements IempleadoService{
+
+	private EmpleadoRepository empleadorepository;
+	
+	
+	@Override
+	public List<Empleado> listar() {
+		return (List<Empleado>)empleadorepository.findAll();
+	}
+
+	@Override
+	public Optional<Empleado> listarId(Long id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
+	@Override
+	public int save(Empleado E) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

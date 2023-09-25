@@ -1,0 +1,30 @@
+package com.cibertec.controller;
+
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.cibertec.entity.Empleado;
+import com.cibertec.repository.EmpleadoRepository;
+
+import ch.qos.logback.core.model.Model;
+
+@Controller
+public class EmpleadosController {
+
+	@Autowired
+    private EmpleadoRepository empleadoRepository;
+
+    @GetMapping("/list")
+    public String listarEmpleados(Model model) {
+    	List<Empleado> empleados = empleadoRepository.findAll() ;
+    	model.addAttribute "empleados",empleados);
+    	return "lista-empleados";
+    }
+	
+	
+}
